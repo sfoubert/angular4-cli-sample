@@ -1,6 +1,8 @@
 {
-  "/api": {
-    "target": "http://api.yourdomain.com",
-    "secure": false
+  "/api/*": {
+    "target": "http://cinejs-services.herokuapp.com/cinejs-services",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "info"
   }
 }
