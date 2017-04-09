@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MovieModule } from './movie/movie.module';
+import { AppRoutingModule } from './app-routing.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,8 +20,12 @@ describe('AppComponent', () => {
         FormsModule,
         HttpModule,
         NgbModule.forRoot(),
+        AppRoutingModule,
         MovieModule,
       ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/' }
+      ]
     }).compileComponents();
   }));
 

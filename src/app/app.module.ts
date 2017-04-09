@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieModule } from './movie/movie.module';
 import { AppRoutingModule } from './app-routing.module';
+import { IndexRoutingModule } from './index/index-routing.module';
+import { IndexModule } from './index/index.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
+    IndexRoutingModule,
     AppRoutingModule,
+    IndexModule,
     MovieModule
   ],
   providers: [],
