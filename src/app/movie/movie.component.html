@@ -2,6 +2,10 @@
   movie works!
 </p>
 
+<ul>
+  <li *ngFor="let m of movies">{{m.title}}</li>
+</ul>
+
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
   <ngb-panel title="Simple">
     <template ngbPanelContent>
