@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MovieComponent } from './movie.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieService } from './movie.service';
-import { Http, BaseRequestOptions } from '@angular/http';
+import {Http, BaseRequestOptions, XHRBackend, HttpModule} from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
 describe('MovieComponent', () => {
@@ -11,6 +11,7 @@ describe('MovieComponent', () => {
   let fixture: ComponentFixture<MovieComponent>;
 
   const mockHttpProvider = {
+    provide: Http,
     deps: [ MockBackend, BaseRequestOptions ],
     useFactory: (backend: MockBackend, defaultOptions: BaseRequestOptions) => {
       return new Http(backend, defaultOptions);
@@ -21,11 +22,14 @@ describe('MovieComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ MovieComponent ],
       imports: [
-        NgbModule.forRoot()
+        HttpModule,
+        NgbModule.forRoot(),
       ],
       providers: [
-        { provide: Http, useValue: mockHttpProvider },
-        MovieService
+        MovieService,
+        MockBackend,
+        BaseRequestOptions,
+        mockHttpProvider
       ],
     })
     .compileComponents();
