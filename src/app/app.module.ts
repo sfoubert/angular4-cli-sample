@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MovieModule } from './movie/movie.module';
 import { IndexModule } from './index/index.module';
 import { UserModule } from './user/user.module';
+import { EntryComponent } from './entry/entry.component';
+import { EntryModule } from './entry/entry.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { UserModule } from './user/user.module';
     IndexModule,
     MovieModule,
     UserModule,
+    EntryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

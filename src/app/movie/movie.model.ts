@@ -1,6 +1,6 @@
 export class Movie {
 
-  constructor(public title: string){
+  constructor(public title: string) {
   }
 
 }

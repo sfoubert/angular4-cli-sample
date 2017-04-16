@@ -6,9 +6,9 @@ import { MockBackend } from '@angular/http/testing';
 
 const mockMovies = [
   {
-    "id": {},
-    "title": "Les associés",
-    "categories": null
+    'id': {},
+    'title': 'Les associés',
+    'categories': null
   }];
 
 describe('MovieService', () => {
@@ -38,7 +38,7 @@ describe('MovieService', () => {
 
     service.getMovies().subscribe((response) => {
       expect(response.length).toBe(1);
-      expect(response[0].title).toBe("Les associés");
+      expect(response[0].title).toBe('Les associés');
     });
 
   }));
