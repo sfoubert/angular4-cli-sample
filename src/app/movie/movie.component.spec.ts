@@ -10,26 +10,17 @@ describe('MovieComponent', () => {
   let component: MovieComponent;
   let fixture: ComponentFixture<MovieComponent>;
 
-  const mockHttpProvider = {
-    provide: Http,
-    deps: [ MockBackend, BaseRequestOptions ],
-    useFactory: (backend: MockBackend, defaultOptions: BaseRequestOptions) => {
-      return new Http(backend, defaultOptions);
-    }
-  };
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieComponent ],
+      declarations: [
+        MovieComponent
+      ],
       imports: [
         HttpModule,
         NgbModule.forRoot(),
       ],
       providers: [
         MovieService,
-        MockBackend,
-        BaseRequestOptions,
-        mockHttpProvider
       ],
     })
     .compileComponents();

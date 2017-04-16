@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MovieModule } from './movie/movie.module';
 import { AppRoutingModule } from './app-routing.module';
-import { IndexRoutingModule } from './index/index-routing.module';
+
+import { MovieModule } from './movie/movie.module';
 import { IndexModule } from './index/index.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,10 @@ import { IndexModule } from './index/index.module';
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
-    IndexRoutingModule,
     AppRoutingModule,
     IndexModule,
-    MovieModule
+    MovieModule,
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

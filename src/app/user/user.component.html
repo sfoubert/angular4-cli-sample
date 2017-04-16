@@ -1,0 +1,30 @@
+<div class="container">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Sexe</th>
+      <th>Email</th>
+      <th>Date de naissance</th>
+      <th>Photo</th>
+      <th>Rôle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let u of users; let i = index;">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{u.name}}</td>
+      <td>{{u.firstname}}</td>
+      <td>{{u.gender}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.birthDate}}</td>
+      <td>{{u.photo}}</td>
+      <td>{{u.role}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

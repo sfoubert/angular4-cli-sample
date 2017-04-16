@@ -1,12 +1,23 @@
-<p>
-  movie works!
-</p>
+<div class="container">
 
-<ul>
-  <li *ngFor="let m of movies">{{m.title}}</li>
-</ul>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Titre</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let m of movies; let i = index;">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{m.title}}</td>
+    </tr>
+    </tbody>
+  </table>
 
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+</div>
+
+<!--ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
   <ngb-panel title="Simple">
     <template ngbPanelContent>
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
@@ -40,4 +51,4 @@
       labore sustainable VHS.
     </template>
   </ngb-panel>
-</ngb-accordion>
+</ngb-accordion-->
