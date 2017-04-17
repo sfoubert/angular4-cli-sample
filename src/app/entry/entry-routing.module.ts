@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EntryComponent } from './entry.component';
 
 const routes: Routes = [
-  { path: 'entries', component: EntryComponent },
+  { path: '', component: EntryComponent }
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class EntryRoutingModule { }
+export const EntryRoutingModule: ModuleWithProviders = RouterModule.forChild(routes);

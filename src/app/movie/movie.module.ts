@@ -8,9 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
+    MovieRoutingModule,
     CommonModule,
     NgbModule.forRoot(),
-    MovieRoutingModule
   ],
   providers: [MovieService],
   declarations: [MovieComponent]

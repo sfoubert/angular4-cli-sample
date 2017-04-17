@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieComponent } from './movie.component';
 
 const routes: Routes = [
-  { path: 'movies', component: MovieComponent },
+  { path: '', component: MovieComponent }
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class MovieRoutingModule { }
+export const MovieRoutingModule: ModuleWithProviders = RouterModule.forChild(routes);

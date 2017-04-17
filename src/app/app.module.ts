@@ -12,6 +12,9 @@ import { IndexModule } from './index/index.module';
 import { UserModule } from './user/user.module';
 import { EntryComponent } from './entry/entry.component';
 import { EntryModule } from './entry/entry.module';
+import {MovieRoutingModule} from "./movie/movie-routing.module";
+import {UserRoutingModule} from "./user/user-routing.module";
+import {EntryRoutingModule} from "./entry/entry-routing.module";
 
 @NgModule({
   declarations: [
@@ -24,9 +27,6 @@ import { EntryModule } from './entry/entry.module';
     NgbModule.forRoot(),
     AppRoutingModule,
     IndexModule,
-    MovieModule,
-    UserModule,
-    EntryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
